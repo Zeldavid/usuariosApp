@@ -1,0 +1,16 @@
+<h1>Users</h1>
+<hr>
+<div class="card-columns">
+    <div class="card" *ngFor="let user of users; let i = index">
+        <div class="card-body">
+            <h4 class="card-title">Nombre</h4>
+            <h6 class="card-title">{{user.name}}</h6>
+            <h5 class="card-text">Username</h5>
+            <h6 class="card-text">{{user.username}}</h6>
+            <h5 class="card-text">Telefono</h5>
+            <h6 class="card-text">{{user.phone}}</h6>
+            <button (click)="goToUser(user.id)" class="btn btn-primary btn-block">Ver más...</button>
+            <!-- <a [routerLink]="['/user', user.id]" class="btn btn-primary btn-block">Ver mas...</a> -->
+        </div>
+    </div>
+</div>
